@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+*, *::after, *::before {
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100dvh;
+    font-family: "Poppins";
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #FAFFFF;
+    height: 15dvh;
+    background-image: linear-gradient(110deg, #172A3A , #004346, #2f727b);
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 22px;
+    width: 40%;
+    text-align: center;
+    margin: 0;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-block: 10px;
+}
+
+.gallery div {
+    flex-basis: 24%;
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+nav {
+    flex-grow: 1;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FAFFFF;
+    display: block;
+    transition: all 200ms ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #00a0a8;
+    transform: scale(1.14);
+}
+
+nav ul li a.brasil:hover, span.brasil {
+    background-image: linear-gradient(110deg, rgb(39, 182, 218) 10%, rgb(247, 236, 83) 70%, rgb(60, 179, 95));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #00a832
+}
+
+nav ul li a.mundo:hover, span.mundo {
+    background-image: linear-gradient(110deg, rgb(0, 113, 218) 60%, rgb(184, 245, 253));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0057da
+}
+
+.conteudo {
+    margin: auto;
+    width: 85dvw;
+}
+
+.conteudo p {
+    text-align: justify;
+}
+
+.conteudo article {
+    border-radius: 15px;
+    box-shadow: 2px 2px 17px -2px rgba(0,0,0,0.25);
+    margin-block: 2dvh;
+    padding: 3dvh 2dvw;
+}
+
+article h2 {
+    margin-bottom: 1dvh;
+}
+
+.hero {
+    height: 50dvh;
+    background-color: #508991;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.hero img {
+    height: 70%;
+}
+
+.hero h1 {
+    text-transform: uppercase;
+    color: #FAFFFF;
+    font-weight: 900;
+    margin: 0;
+}
+
+.conteudo ol li {
+    list-style: upper-roman;
+}
+
+.indicadores div {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 5dvh;
+}
+
+.indicadores img {
+    width: 100%;
+    object-fit: scale-down;
+    transition: all 300ms ease-in-out;
+}
+
+.indicadores img:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    background-image: linear-gradient(110deg, #172A3A , #004346, #2f727b);
+    color: #FAFFFF;
+    padding: 15px 15px 5px 15px;
+}
+
+footer h2 {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+footer ul li {
+    list-style: none;
+}
+
+@media (max-width: 700px) {
+    header nav ul{
+        gap: 5px;
+        flex-wrap: wrap;
+        word-wrap: break-word;
+    }
+    .hero {
+        flex-direction: column;
+    }
+    .gallery div {
+        flex-basis: 49%;
+    }
+
+    .indicadores div {
+        width: 100%;
+    }
+}
